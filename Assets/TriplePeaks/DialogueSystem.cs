@@ -27,7 +27,7 @@ public class DialogueSystem : MonoBehaviour
 	// Use this for initialization
 	void Start () {
 
-        DialogueChosen += HandleChoice;
+        
 	}
 	
 	// Update is called once per frame
@@ -41,38 +41,5 @@ public class DialogueSystem : MonoBehaviour
         {
             DialogueChosen( this,new DialogueArgs(dialogue));
         }
-    }
-
-    void HandleChoice(object sender, DialogueArgs dialog)
-    {
-        string choice = dialog.dialgogueSelected;
-
-        ChoicesCanvas.gameObject.SetActive(false);
-        DiagBox.gameObject.SetActive(true);
-
-        switch (choice)
-        {
-            case "How are you?":
-                {
-                    DiagBox.AssignDialogue("fuck you 1");
-                    break;
-                }
-            case "How is the weather?":
-                {
-                    DiagBox.AssignDialogue("fuck you 2");
-                    break;
-                }
-            case "Comfort myself.":
-                {
-                    DiagBox.AssignDialogue("*comforts*");
-                    break;
-                }
-            default:
-                {
-                    DiagBox.AssignDialogue("ERR NO CHOICE");
-                    break;
-                }
-        }
-
     }
 }
