@@ -17,8 +17,8 @@ public class WaypointArgs : EventArgs
         COMPLETED
     }
 
-    STATUS NewStatus;
-    Vector3 Waypoint;
+    public STATUS NewStatus;
+    public Vector3 Waypoint;
 
 }
 
@@ -61,7 +61,7 @@ public class WaypointCharacter : MonoBehaviour {
 
                 Waypoints.RemoveAt(0);
 
-                if (WaypointChanged != null)
+                if (WaypointChanged != null && Waypoints.Count > 0 )
                 {
                     WaypointChanged(this, new WaypointArgs(WaypointArgs.STATUS.STARTING, Waypoints[0]));
                 }
