@@ -9,6 +9,12 @@ public class PawnShopSequence : MonoBehaviour
 
     int progress = 0;
 
+    public Transform ItemSpawnpoint;
+
+    public GameObject RolexPrefab;
+    public GameObject SatanicBiblePrefab;
+    public GameObject RedHerringPrefab;
+    
 	// Use this for initialization
 	void Start ()
     {
@@ -26,6 +32,14 @@ public class PawnShopSequence : MonoBehaviour
         PawnShopItemDialogue.DialogueChosen += HandleItemChoice;
 
         PawnShopItemDialogue.DiagBox.DialogueInteracted += HandleItemDialogue;
+
+#if UNITY_EDITOR
+        InventoryItem evidence = new InventoryItem();
+        evidence.Name = "Satanic Bible";
+
+        ItemSystem inv = ItemSystem.instance;
+        inv.AddItem("evidence", evidence);
+#endif
 	}
 	
 	// Update is called once per frame
@@ -74,11 +88,40 @@ public class PawnShopSequence : MonoBehaviour
                     break;
                 }
         }
+
+        
     }
     void HandleGreetingDialogue(object sender, DialogueBoxArgs diaArgs)
     {
         ++progress;
         PawnShopItemDialogue.gameObject.SetActive(true);
+
+        ItemSystem itSys = ItemSystem.instance;
+        InventoryItem item = itSys.GetItem("evidence");
+
+        switch (item.Name)
+        {
+            case "Rolex":
+                {
+                    Instantiate(RolexPrefab, ItemSpawnpoint.position, Quaternion.identity);
+                    break;
+                }
+            case "Satanic Bible":
+                {
+                    Instantiate(SatanicBiblePrefab, ItemSpawnpoint.position, Quaternion.identity);
+
+                    break;
+                }
+            case "Red Herring":
+                {
+                    Instantiate(RedHerringPrefab, ItemSpawnpoint.position, Quaternion.identity);
+                    break;
+                }
+            default:
+                {
+                    break;
+                }
+        }
     }
     
     void HandleItemChoice(object sender, DialogueArgs dialog)
@@ -88,13 +131,7 @@ public class PawnShopSequence : MonoBehaviour
         PawnShopItemDialogue.ChoicesCanvas.gameObject.SetActive(false);
         PawnShopItemDialogue.DiagBox.gameObject.SetActive(true);
 
-#if UNITY_EDITOR
-        InventoryItem evidence = new InventoryItem();
-        evidence.Name = "Satanic Bible";
 
-        ItemSystem inv = ItemSystem.instance;
-        inv.AddItem("evidence", evidence);
-#endif
 
         ItemSystem itSys = ItemSystem.instance;
 
