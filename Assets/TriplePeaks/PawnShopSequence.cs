@@ -4,7 +4,8 @@ using System.Collections;
 public class PawnShopSequence : MonoBehaviour
 {
     public WaypointCharacter Protagonist;
-    public DialogueSystem PawnShopDialogue;
+    public DialogueSystem PawnShopGreetingDialogue;
+    public DialogueSystem PawnShopItemDialogue;
 
     int progress = 0;
 
@@ -16,8 +17,8 @@ public class PawnShopSequence : MonoBehaviour
         Protagonist.ShouldMove = true;  // start the first move
 
         // subscribe to 
-        PawnShopDialogue.DialogueChosen += HandleDialogue;
-        PawnShopDialogue.DialogueChosen += DebugDialogue;
+        PawnShopGreetingDialogue.DiagBox.DialogueInteracted += HandleDialogue;
+        PawnShopGreetingDialogue.DialogueChosen += DebugDialogue;
 	}
 	
 	// Update is called once per frame
@@ -30,15 +31,16 @@ public class PawnShopSequence : MonoBehaviour
         if (progress == 0)
         {
             Protagonist.ShouldMove = false;
-            PawnShopDialogue.gameObject.SetActive(true);
+            PawnShopGreetingDialogue.gameObject.SetActive(true);
         }
 
         ++progress;
     }
 
-    void HandleDialogue(object sender, DialogueArgs diaArgs)
+    void HandleDialogue(object sender, DialogueBoxArgs diaArgs)
     {
-        
+        ++progress;
+        PawnShopItemDialogue.gameObject.SetActive(true);
     }
 
     void DebugDialogue(object sender, DialogueArgs diaArgs)
