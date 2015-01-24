@@ -4,13 +4,11 @@ using System.Collections.Generic;
 
 public class InventoryItem
 {
-    string Name;
-    string Description;
+    public string Name;
+    public string Description;
 }
 
 public class ItemSystem : MonoBehaviour {
-
-    public int Lives = 3;
 
     private static ItemSystem _instance;
 
@@ -34,7 +32,6 @@ public class ItemSystem : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-
     }
 
     // Update is called once per frame
@@ -53,5 +50,10 @@ public class ItemSystem : MonoBehaviour {
         return Items[key];
     }
 
-    Dictionary<string, InventoryItem> Items;
+    public bool CheckItemExists(string key)
+    {
+        return Items.ContainsKey(key);
+    }
+
+    Dictionary<string, InventoryItem> Items = new Dictionary<string,InventoryItem>();
 }

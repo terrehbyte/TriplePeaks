@@ -55,17 +55,17 @@ public class PawnShopSequence : MonoBehaviour
         {
             case "How are you?":
                 {
-                    PawnShopGreetingDialogue.DiagBox.AssignDialogue("fuck you 1");
+                    PawnShopGreetingDialogue.DiagBox.AssignDialogue("I'm having an eggcellent day!");
                     break;
                 }
             case "How is the weather?":
                 {
-                    PawnShopGreetingDialogue.DiagBox.AssignDialogue("fuck you 2");
+                    PawnShopGreetingDialogue.DiagBox.AssignDialogue("Cloudy, with a chance of spoilage.");
                     break;
                 }
-            case "Comfort myself.":
+            case "What's up?":
                 {
-                    PawnShopGreetingDialogue.DiagBox.AssignDialogue("*comforts*");
+                    PawnShopGreetingDialogue.DiagBox.AssignDialogue("The ceiling!");
                     break;
                 }
             default:
@@ -88,29 +88,113 @@ public class PawnShopSequence : MonoBehaviour
         PawnShopItemDialogue.ChoicesCanvas.gameObject.SetActive(false);
         PawnShopItemDialogue.DiagBox.gameObject.SetActive(true);
 
+#if UNITY_EDITOR
+        InventoryItem evidence = new InventoryItem();
+        evidence.Name = "Satanic Bible";
+
+        ItemSystem inv = ItemSystem.instance;
+        inv.AddItem("evidence", evidence);
+#endif
+
+        ItemSystem itSys = ItemSystem.instance;
+
+        string reply = "What? (invalid answer, bug programmer";
+        InventoryItem item = itSys.GetItem("evidence");
+
         switch (choice)
         {
             case "How much is it worth?":
                 {
-                    PawnShopItemDialogue.DiagBox.AssignDialogue("TODO");
+                    switch (item.Name)
+                    {
+                        case "Rolex":
+                            {
+                                reply = "It's a small Rolex worth, fit for a lil' girl. I'd say $145.";
+                                break;
+                            }
+                        case "Satanic Bible":
+                            {
+                                reply = "Satanic bibles? I don't think anyone would buy this weird thing.";
+
+                                break;
+                            }
+                        case "Red Herring":
+                            {
+                                reply = "Nothing.";
+                                break;
+                            }
+                        default:
+                            {
+                                reply = "INVALID ANSWER, bug the programmer.";
+                                break;
+                            }
+                    }
                     break;
                 }
             case "Who would buy this?":
                 {
-                    PawnShopItemDialogue.DiagBox.AssignDialogue("TODO");
+                    switch (item.Name)
+                    {
+                        case "Rolex":
+                            {
+                                reply = "Probably a young girl, somewhere around your age I guess.";
+                                break;
+                            }
+                        case "Satanic Bible":
+                            {
+                                reply = "Worshippers of Satan? Who else?";
+
+                                break;
+                            }
+                        case "Red Herring":
+                            {
+                                reply = "Fisherman, I reckon.";
+                                break;
+                            }
+                        default:
+                            {
+                                reply = "INVALID ANSWER, bug the programmer.";
+                                break;
+                            }
+                    }
                     break;
                 }
             case "Where would someone get this?":
                 {
-                    PawnShopItemDialogue.DiagBox.AssignDialogue("TODO");
+                    switch (item.Name)
+                    {
+                        case "Rolex":
+                            {
+                                reply = "Nowhere around here that I can think of. Nearest store 's in Seattle!";
+                                break;
+                            }
+                        case "Satanic Bible":
+                            {
+                                reply = "Heck if I know.";
+
+                                break;
+                            }
+                        case "Red Herring":
+                            {
+                                reply = "The sea?";
+                                break;
+                            }
+                        default:
+                            {
+                                reply = "INVALID ANSWER, bug the programmer.";
+                                break;
+                            }
+                    }
                     break;
                 }
             default:
                 {
-                    PawnShopItemDialogue.DiagBox.AssignDialogue("YOU FUCKED. *BROKEN CHOICE*");
+                    reply = "INVALID ANSWER, bug the programmer!!!";
                     break;
                 }
         }
+
+        PawnShopItemDialogue.DiagBox.AssignDialogue(reply);
     }
     void HandleItemDialogue(object sender, DialogueBoxArgs dialog)
     {
@@ -120,24 +204,5 @@ public class PawnShopSequence : MonoBehaviour
     void DebugDialogue(object sender, DialogueArgs diaArgs)
     {
         Debug.Log(diaArgs.dialgogueSelected);
-    }
-
-    void transition(int newProgress)
-    {
-        switch (newProgress)
-        {
-            case 0:
-                {
-                    break;
-                }
-            case 1:
-                {
-                    break;
-                }
-            default:
-                {
-                    break;
-                }
-        }
     }
 }
