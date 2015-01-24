@@ -27,13 +27,40 @@ public class WaypointCharacter : MonoBehaviour {
     public float Speed = 1.0f;
     public List<Vector3> Waypoints;
 
-    public bool ShouldMove;
+    private bool shouldMove;
+    public bool ShouldMove
+    {
+        get
+        {
+            return shouldMove;
+        }
+        set
+        {
+            shouldMove = value;
+
+            if (value)
+            {
+                charaAnimator.ResetTrigger("Idle");
+                charaAnimator.ResetTrigger("Walking");
+                charaAnimator.SetTrigger("Walking");
+            }
+            else
+            {
+                charaAnimator.ResetTrigger("Idle");
+                charaAnimator.ResetTrigger("Walking");
+                charaAnimator.SetTrigger("Idle");
+            }
+        }
+    }
+
+    public Animator charaAnimator;
 
     public delegate void WaypointStatusChanged(object sender, WaypointArgs args);
     public event WaypointStatusChanged WaypointChanged;
 
 	// Use this for initialization
 	void Start () {
+        ShouldMove = true;
 	
 	}
 	
