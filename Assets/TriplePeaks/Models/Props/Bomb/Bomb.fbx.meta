@@ -1,0 +1,118 @@
+fileFormatVersion: 2
+guid: 52023ef03047c9e4cb9fa9d81ebfeee5
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: C4
+    100004: C41
+    100006: C42
+    100008: C43
+    100010: Detonator
+    100012: Detonator 1
+    100014: GreenLight
+    100016: RedLight
+    100018: TimerPlaceholder
+    100020: Wire1
+    100022: Wire2
+    100024: Wire3
+    100026: Wires
+    400000: //RootNode
+    400002: C4
+    400004: C41
+    400006: C42
+    400008: C43
+    400010: Detonator
+    400012: Detonator 1
+    400014: GreenLight
+    400016: RedLight
+    400018: TimerPlaceholder
+    400020: Wire1
+    400022: Wire2
+    400024: Wire3
+    400026: Wires
+    2300000: C41
+    2300002: C42
+    2300004: C43
+    2300006: Detonator 1
+    2300008: GreenLight
+    2300010: RedLight
+    2300012: TimerPlaceholder
+    2300014: Wire1
+    2300016: Wire2
+    2300018: Wire3
+    3300000: C41
+    3300002: C42
+    3300004: C43
+    3300006: Detonator 1
+    3300008: GreenLight
+    3300010: RedLight
+    3300012: TimerPlaceholder
+    3300014: Wire1
+    3300016: Wire2
+    3300018: Wire3
+    4300000: Wire3
+    4300002: Wire2
+    4300004: Wire1
+    4300006: RedLight
+    4300008: GreenLight
+    4300010: Detonator
+    4300012: TimerPlaceholder
+    4300014: C43
+    4300016: C42
+    4300018: C41
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .300000012
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

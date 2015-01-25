@@ -4,6 +4,7 @@ using System.Collections;
 public class PlayerCarControl : MonoBehaviour {
 
 	public Transform  playerTransform;
+    public Transform playerCamTrans;
 	public float speed;
 	// Use this for initialization
 	void Start () {
@@ -26,6 +27,10 @@ public class PlayerCarControl : MonoBehaviour {
 				}
 		//nextPosition.position.x = currentPosition.position.x + moveX;
 		//playerTransform.position = nextPosition.position;
+
+        playerTransform.Translate(0f, 0f, -20f * Time.deltaTime);
+
+        playerCamTrans.position = new Vector3(playerCamTrans.position.x, playerCamTrans.position.y, playerTransform.position.z);
 
 	}
 }
