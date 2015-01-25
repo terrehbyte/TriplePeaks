@@ -13,6 +13,12 @@ public class EvilSister : MonoBehaviour
 	public bool _Invulnerable = true;	//Flag for when 
 	public Text _Dialogue;
 
+
+	//"state based" rendering stuff
+	public Material _DefaultMaterial;
+	public Material _MonsterMaterial;
+	public Light _Glow;
+
 	public  DateTime _lastChaseTime = DateTime.Now;
 
 	public DateTime LastDialogueDisplay {get;set;}
@@ -40,14 +46,17 @@ public class EvilSister : MonoBehaviour
 	{
 		if(_Brother)
 		{
+
 			if(_Cutscene.GetComponent<Cutscene>().Finished == true)
 			{
 				//Evil sister will charge every x seconds, where x is the integer value set in the inspector.
 				if(DateTime.Now >= _lastChaseTime + new TimeSpan(0,0,_ChaseInterval))
 				{
+					renderer.material = _MonsterMaterial;
 					_lastChaseTime = DateTime.Now;
 					_positionToCharge = _Brother.transform.position;
 					transform.LookAt (_positionToCharge);
+					_Glow.color = Color.red;
 				}
 				
 				//Evil sister is invulnerable to veggies unless her mouth is open!
@@ -55,6 +64,8 @@ public class EvilSister : MonoBehaviour
 				if(Vector3.Distance (transform.position, _positionToCharge) <= 1.5F)
 				{
 					_Invulnerable = true;
+					_Glow.color = Color.white;
+					renderer.material = _DefaultMaterial;
 				}
 				else
 				{
@@ -67,7 +78,7 @@ public class EvilSister : MonoBehaviour
 				//THE VEGGIES OH GOD I NEED BLOOOOOODDDDDDDDDDD...
 				if(_Health <= 0)
 				{
-					Destroy (gameObject);
+					//Destroy (gameObject);
 				}
 
 				//Clear battle text after a second or so
@@ -82,11 +93,16 @@ public class EvilSister : MonoBehaviour
 	void OnTriggerEnter(Collider col)
 	{
 		//Stop if we hit our brother
-		if(col.gameObject == _Brother)
+		if(col.gameObject == _Brother  )
 		{
 			LastDialogueDisplay = DateTime.Now;
 			_positionToCharge = transform.position;
-			_Brother.GetComponent<Player>()._Health--;
+			_Brother.GetComponent<Player>().Invulnerable = true;
+			_Brother.GetComponent<Player>().WhenToLoseInvuln = DateTime.Now + new TimeSpan(0,0,0,1,500);
+			if(_Brother.GetComponent<Player>().Invulnerable == false)
+			{
+				_Brother.GetComponent<Player>()._Health--;
+			}
 			_Dialogue.text = "OMM NOM NOM NOM NOM !";
 		}
 	}

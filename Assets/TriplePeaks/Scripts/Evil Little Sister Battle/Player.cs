@@ -13,10 +13,15 @@ public class Player : MonoBehaviour
 	private TimeSpan _shotDelay;
 	public int _Health = 3;
 
+	public bool Invulnerable {get;set;}
+	public DateTime WhenToLoseInvuln;
 
 	// Use this for initialization
 	void Start () 
 	{
+		Invulnerable = false;
+		WhenToLoseInvuln = new DateTime();
+
 		_whenLastShot = DateTime.Now;
 		_shotDelay = new TimeSpan(0,0,1);
 	}
@@ -28,7 +33,7 @@ public class Player : MonoBehaviour
 
 		if(_Health <= 0)
 		{
-			Destroy (gameObject);
+			//Destroy (gameObject);
 		}
 	}
 
@@ -71,7 +76,19 @@ public class Player : MonoBehaviour
 				movement.x = _Speed;
 			}
 			
-			transform.Translate (movement * Time.deltaTime);
+			//transform.Translate (movement * Time.deltaTime);
+			transform.position = Vector3.MoveTowards (transform.position, transform.position + movement, Time.deltaTime * _Speed);
+			transform.LookAt ( transform.position + movement * Time.deltaTime);
+
+			//Invulnerability
+			if(Invulnerable == true)
+			{
+				gameObject.renderer.enabled = !gameObject.renderer.enabled; //flicker
+			}
+			if(DateTime.Now >= WhenToLoseInvuln)
+			{
+				Invulnerable = false;
+			}
 		}
 
 	}
