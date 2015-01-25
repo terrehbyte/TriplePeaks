@@ -23,6 +23,7 @@ public class HospitalRoom : MonoBehaviour {
 	void Start ()
 	{
 		DoctorMSG.text = "";
+		Note.SetActive (false);
 	}
 	
 	// Update is called once per frame
@@ -65,6 +66,7 @@ public class HospitalRoom : MonoBehaviour {
 	{
 
 		NoteText.text = "This message will blow up in 5 seconds";
+
 	}
 	void Speak()
 	{
@@ -93,31 +95,31 @@ public class HospitalRoom : MonoBehaviour {
 	{
 		if (Input.GetKeyDown (KeyCode.LeftArrow)) 
 		{
-			if (Saw.transform.position.x < 1.4f)
+			if (Saw.transform.position.x < 2.8f)
 			{
-				Saw.transform.position += new Vector3 (.05f, -.01f, 0);
+				Saw.transform.position += new Vector3 (.05f, -.02f, 0);
 				sawCount++;
 			}
 			else 
 			{
-				Saw.transform.position = new Vector3(1.4f, Saw.transform.position.y, Saw.transform.position.z);
+				Saw.transform.position = new Vector3(2.8f, Saw.transform.position.y, Saw.transform.position.z);
 			}
 
 
 		}
 		if (Input.GetKeyDown (KeyCode.RightArrow)) 
 		{
-			if (Saw.transform.position.x > .9f)
+			if (Saw.transform.position.x > 1.8f)
 			{
-			Saw.transform.position += new Vector3 (-.05f, -.01f, 0);
+			Saw.transform.position += new Vector3 (-.05f, -.02f, 0);
 			sawCount++;
 			}
 			else
 			{
-				Saw.transform.position = new Vector3(.9f, Saw.transform.position.y, Saw.transform.position.z);
+				Saw.transform.position = new Vector3(1.8f, Saw.transform.position.y, Saw.transform.position.z);
 			}
 		}
-		if (sawCount >= 30) 
+		if (sawCount >= 25) 
 		{
 			LogHalf2.transform.position += new Vector3 (-.1f, -.6f, 0) * Time.deltaTime;
 			LogHalf1.transform.position += new Vector3 (-.1f, -.6f, 0) * Time.deltaTime;
@@ -135,12 +137,11 @@ public class HospitalRoom : MonoBehaviour {
 		// rotate until upright
 		if (MC.transform.rotation.x > 0)
 		{
-						MC.transform.Rotate (Vector3.forward * 90f);
+						MC.transform.Rotate (Vector3.forward * .9f*Time.deltaTime);
 		}
 	}
 	void ReadNote()
 	{
-		Note.transform.position = new Vector3 (-4.5957f, 3.6862f, 7.322f);
-
+		Note.SetActive(true);
 	}
 }
