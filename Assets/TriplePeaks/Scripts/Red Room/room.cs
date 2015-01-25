@@ -47,13 +47,13 @@ public class room : MonoBehaviour {
 				thing.text = "";
 				if (gameTimer >= 9)
 				{
-					thing.text = "PlaceHolderText1";
+					thing.text = "And we know about being close";
 					if (gameTimer >= 12)
 					{
-						thing.text = "Wanna do something painful?";
+						thing.text = "";
 						if (gameTimer >= 13)
 						{
-							thing.text = "PlaceHolderText2";
+							thing.text = "Thank you! We'll be here till Thursday.";
                             if (gameTimer >= 16)
                             {
                                 LevelSystem.instance.LoadNextLevel();
