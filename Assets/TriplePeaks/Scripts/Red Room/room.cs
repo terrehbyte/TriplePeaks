@@ -54,6 +54,10 @@ public class room : MonoBehaviour {
 						if (gameTimer >= 13)
 						{
 							thing.text = "PlaceHolderText2";
+                            if (gameTimer >= 16)
+                            {
+                                LevelSystem.instance.LoadNextLevel();
+                            }
 						}
 					}
 				}

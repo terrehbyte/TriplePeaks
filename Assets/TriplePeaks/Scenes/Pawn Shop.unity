@@ -275,7 +275,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &195688474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -287,6 +287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 986e39e172fa8d74f9be3fdf3e747958, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LivesStartingCount: 3
   Lives: 3
 --- !u!4 &195688475
 Transform:
@@ -989,6 +990,14 @@ Prefab:
     - target: {fileID: 11405776, guid: 07676ed715e2d3e49b6659011dbff2e7, type: 2}
       propertyPath: Waypoints.Array.data[0].z
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 11405776, guid: 07676ed715e2d3e49b6659011dbff2e7, type: 2}
+      propertyPath: PawnShopLady
+      value: 
+      objectReference: {fileID: 1255950776}
+    - target: {fileID: 105776, guid: 07676ed715e2d3e49b6659011dbff2e7, type: 2}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 07676ed715e2d3e49b6659011dbff2e7, type: 2}
@@ -2428,7 +2437,7 @@ GameObject:
   - 136: {fileID: 1255950779}
   - 23: {fileID: 1255950778}
   m_Layer: 0
-  m_Name: Capsule
+  m_Name: Pawn Shop Lady
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2917,7 +2926,7 @@ GameObject:
   - 114: {fileID: 1607206351}
   m_Layer: 0
   m_Name: Capsule
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3010,7 +3019,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1658456929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3401,6 +3410,9 @@ GameObject:
   - 33: {fileID: 2058482997}
   - 23: {fileID: 2058482996}
   - 111: {fileID: 2058482995}
+  - 54: {fileID: 2058483000}
+  - 136: {fileID: 2058482999}
+  - 114: {fileID: 2058482998}
   m_Layer: 0
   m_Name: Pawn_Shop_weeble
   m_TagString: Untagged
@@ -3465,3 +3477,42 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1058439451}
   m_GameObject: {fileID: 2058482993}
   m_Mesh: {fileID: 4300000, guid: 21c09987a7c3ffb49855268ade77122e, type: 3}
+--- !u!114 &2058482998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2058482993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5863f786922c5334cad6664f0560737d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!136 &2058482999
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2058482993}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 1.181095
+  m_Height: 3.53075624
+  m_Direction: 1
+  m_Center: {x: -5.43856793e-10, y: .583961844, z: -.00549018383}
+--- !u!54 &2058483000
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2058482993}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
