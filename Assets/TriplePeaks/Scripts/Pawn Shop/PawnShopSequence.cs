@@ -14,6 +14,8 @@ public class PawnShopSequence : MonoBehaviour
     public GameObject RolexPrefab;
     public GameObject SatanicBiblePrefab;
     public GameObject RedHerringPrefab;
+
+    public Animation SexyTackle;
     
 	// Use this for initialization
 	void Start ()
@@ -236,6 +238,7 @@ public class PawnShopSequence : MonoBehaviour
     void HandleItemDialogue(object sender, DialogueBoxArgs dialog)
     {
         ++progress;
+        SexyTackle.Play();
     }
 
     void DebugDialogue(object sender, DialogueArgs diaArgs)
