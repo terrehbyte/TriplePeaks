@@ -13,19 +13,7 @@ public class PlayerStairControl : MonoBehaviour {
 
     [SerializeField]
     Collider EndTrigger;
-
-//	enum DIRECTION
-//	{
-//		NEUTRAL,
-//		UP,
-//		RIGHT,
-//		DOWN,
-//	};
-
-//	DIRECTION dirTrig;
-
-	// bool movingUp, movingRight, movingDown, neutral;
-
+// ---------------------------------------------------------------------------------------
 	int jumpCount, rightCount;
 
 	Vector3 up = new Vector3(0,1,0);
@@ -38,10 +26,7 @@ public class PlayerStairControl : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-//		movingUp = false;
-//		movingRight = false;
-//		movingDown = false;
-
+	
 		jumpCount = 0;
 		rightCount = 0;
 	}
