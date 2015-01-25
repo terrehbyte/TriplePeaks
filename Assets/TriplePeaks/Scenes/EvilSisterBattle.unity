@@ -116,7 +116,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: Battle text goes here!
 --- !u!222 &452803872
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -140,6 +140,47 @@ RectTransform:
   m_AnchoredPosition: {x: -127.779999, y: 110.839996}
   m_SizeDelta: {x: 200, y: 30}
   m_Pivot: {x: .5, y: .5}
+--- !u!1 &457380107
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 457380109}
+  - 114: {fileID: 457380108}
+  m_Layer: 0
+  m_Name: Cutscene
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &457380108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 457380107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 626c0f4a307ea804ca207b766d50ded3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SecondsForEachDialogue: 4
+  _CurrentDialogue: {fileID: 810464100}
+--- !u!4 &457380109
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 457380107}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 107.899994, y: 256.339996, z: -19.0909996}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
 --- !u!1001 &688478860
 Prefab:
   m_ObjectHideFlags: 0
@@ -191,6 +232,10 @@ Prefab:
       propertyPath: m_LocalScale.x
       value: .567201078
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 336e4632bb861414b96d8d85c0a2edb8, type: 2}
+      propertyPath: _Cutscene
+      value: 
+      objectReference: {fileID: 457380107}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 336e4632bb861414b96d8d85c0a2edb8, type: 2}
   m_RootGameObject: {fileID: 1474497977}
@@ -207,7 +252,7 @@ GameObject:
   - 222: {fileID: 810464101}
   - 114: {fileID: 810464100}
   m_Layer: 5
-  m_Name: Text
+  m_Name: CutsceneText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -227,8 +272,8 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 130, y: 30}
+  m_AnchoredPosition: {x: -8.58044243, y: 86.9639969}
+  m_SizeDelta: {x: 400, y: 30}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &810464100
 MonoBehaviour:
@@ -242,20 +287,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Mat: {fileID: 0}
-  m_Color: {r: .1953125, g: .1953125, b: .1953125, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 0
-    m_RichText: 1
+    m_Alignment: 1
+    m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: Cutscene text here
 --- !u!222 &810464101
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -366,7 +411,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _Brother: {fileID: 1474497977}
-  _Speed: 15
+  _Cutscene: {fileID: 457380107}
+  _Speed: 10
   _ChaseInterval: 3
   _Health: 4
   _Invulnerable: 1
@@ -491,6 +537,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _Speed: 6
+  _Cutscene: {fileID: 457380107}
   _VeggiePrefab: {fileID: 100000, guid: aa1f053a214934842ab807755b6cda52, type: 2}
   _Sister: {fileID: 1152379014}
   _Health: 3
@@ -923,6 +970,14 @@ Prefab:
     - target: {fileID: 400000, guid: 112f4e53a1733454dab29e8ff62e7138, type: 2}
       propertyPath: m_LocalScale.z
       value: 1.13440216
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 112f4e53a1733454dab29e8ff62e7138, type: 2}
+      propertyPath: _Cutscene
+      value: 
+      objectReference: {fileID: 457380107}
+    - target: {fileID: 11400000, guid: 112f4e53a1733454dab29e8ff62e7138, type: 2}
+      propertyPath: _Speed
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 112f4e53a1733454dab29e8ff62e7138, type: 2}
