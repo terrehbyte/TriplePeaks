@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 03ce2aecab0c9de498463b7f983a00c5
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - Doctor: {fileID: 100000, guid: 11bdcbbb476c5e94eb8dce527b769246, type: 2}
+  - Note: {fileID: 100002, guid: 841bb2d7d36291f4a93915632a0b7fd8, type: 2}
+  - NoteText: {fileID: 11400000, guid: e6c363b8204b30e45abd10c9cb5b1783, type: 2}
+  - LogHalf1: {fileID: 100002, guid: 912e0d2fa7ffce240a053850102853e9, type: 2}
+  - LogHalf2: {fileID: 100000, guid: 8f9ea782d580a634997d0333e5758ff8, type: 2}
+  - Saw: {fileID: 100000, guid: 5147988c8b1e39c4e9b34db774298304, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
