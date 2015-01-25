@@ -76,7 +76,7 @@ public class EntryLevelPlayer : MonoBehaviour
 			_message.text = "Pls transition code.";
 			if(Input.GetMouseButtonUp(0))
 		   	{
-				//code to transition goes here :|
+                LevelSystem.instance.LoadNextLevel();
 			}
 		}
 

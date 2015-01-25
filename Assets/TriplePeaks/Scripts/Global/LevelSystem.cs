@@ -47,13 +47,15 @@ public class LevelSystem : MonoBehaviour
 
         string nextLevel = (levelSequence.Count -1 >= curLevel+1 ? levelSequence[curLevel+1] : levelSequence[0]); // @SAM I DID IT
 
+        StartCoroutine(TimedLoadLevel(nextLevel, 2.5f));
 
-
-
-        Application.LoadLevel(nextLevel);
-
-        if (nextLevel == levelSequence[0])
+        if (nextLevel != levelSequence[0])
         {
+            Application.LoadLevel("Transition");
+        }
+        else
+        {
+            Application.LoadLevel(nextLevel);
             Destroy(this.gameObject);
         }
     }
@@ -68,5 +70,11 @@ public class LevelSystem : MonoBehaviour
             items.ResetData();
             lives.ResetData();
         }
+    }
+
+    IEnumerator TimedLoadLevel(string level, float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+        Application.LoadLevel(level);
     }
 }
