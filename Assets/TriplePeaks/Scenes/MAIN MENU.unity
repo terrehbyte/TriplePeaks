@@ -602,6 +602,7 @@ MonoBehaviour:
   - Pawn Shop
   - redroom
   - hospital
+  - EvilGirlEntryLevel
   - EvilSisterBattle
 --- !u!1 &1294646819
 GameObject:
@@ -883,6 +884,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11456476, guid: 032eecbb911939e418836ca8f879f98e, type: 2}
+      propertyPath: levelSequence.Array.size
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 456482, guid: 032eecbb911939e418836ca8f879f98e, type: 2}
       propertyPath: m_LocalPosition.x
       value: 221.984741
@@ -914,6 +919,46 @@ Prefab:
     - target: {fileID: 456482, guid: 032eecbb911939e418836ca8f879f98e, type: 2}
       propertyPath: m_RootOrder
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11456476, guid: 032eecbb911939e418836ca8f879f98e, type: 2}
+      propertyPath: levelSequence.Array.data[7]
+      value: EvilSisterBattle
+      objectReference: {fileID: 0}
+    - target: {fileID: 11456476, guid: 032eecbb911939e418836ca8f879f98e, type: 2}
+      propertyPath: levelSequence.Array.data[6]
+      value: EvilGirlEntryLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 11456476, guid: 032eecbb911939e418836ca8f879f98e, type: 2}
+      propertyPath: levelSequence.Array.data[8]
+      value: EvilSisterBattle
+      objectReference: {fileID: 0}
+    - target: {fileID: 11456476, guid: 032eecbb911939e418836ca8f879f98e, type: 2}
+      propertyPath: levelSequence.Array.data[9]
+      value: EvilSisterBattle
+      objectReference: {fileID: 0}
+    - target: {fileID: 11456476, guid: 032eecbb911939e418836ca8f879f98e, type: 2}
+      propertyPath: levelSequence.Array.data[10]
+      value: EvilSisterBattle
+      objectReference: {fileID: 0}
+    - target: {fileID: 11456476, guid: 032eecbb911939e418836ca8f879f98e, type: 2}
+      propertyPath: levelSequence.Array.data[11]
+      value: EvilSisterBattle
+      objectReference: {fileID: 0}
+    - target: {fileID: 11456476, guid: 032eecbb911939e418836ca8f879f98e, type: 2}
+      propertyPath: levelSequence.Array.data[12]
+      value: EvilSisterBattle
+      objectReference: {fileID: 0}
+    - target: {fileID: 11456476, guid: 032eecbb911939e418836ca8f879f98e, type: 2}
+      propertyPath: levelSequence.Array.data[13]
+      value: EvilSisterBattle
+      objectReference: {fileID: 0}
+    - target: {fileID: 11456476, guid: 032eecbb911939e418836ca8f879f98e, type: 2}
+      propertyPath: levelSequence.Array.data[14]
+      value: EvilSisterBattle
+      objectReference: {fileID: 0}
+    - target: {fileID: 11456476, guid: 032eecbb911939e418836ca8f879f98e, type: 2}
+      propertyPath: levelSequence.Array.data[15]
+      value: EvilSisterBattle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 032eecbb911939e418836ca8f879f98e, type: 2}

@@ -47,7 +47,15 @@ public class LevelSystem : MonoBehaviour
 
         string nextLevel = (levelSequence.Count -1 >= curLevel+1 ? levelSequence[curLevel+1] : levelSequence[0]); // @SAM I DID IT
 
+
+
+
         Application.LoadLevel(nextLevel);
+
+        if (nextLevel == levelSequence[0])
+        {
+            Destroy(this.gameObject);
+        }
     }
 
     void OnLevelWasLoaded(int level)

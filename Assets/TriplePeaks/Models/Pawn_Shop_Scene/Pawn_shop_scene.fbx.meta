@@ -1,0 +1,135 @@
+fileFormatVersion: 2
+guid: bc30296423990f54db54115f8cd798f9
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Counter
+    100002: Floor
+    100004: Pawn_Clerk_weeble:back
+    100006: Pawn_Clerk_weeble:Pawn_Shop_Clerk_weeble
+    100008: Pawn_Shop
+    100010: //RootNode
+    100012: Roof
+    100014: Walls
+    400000: Counter
+    400002: Floor
+    400004: Pawn_Clerk_weeble:back
+    400006: Pawn_Clerk_weeble:Pawn_Shop_Clerk_weeble
+    400008: Pawn_Shop
+    400010: //RootNode
+    400012: Roof
+    400014: Walls
+    2300000: Counter
+    2300002: Floor
+    2300004: Pawn_Clerk_weeble:Pawn_Shop_Clerk_weeble
+    2300006: Roof
+    2300008: Walls
+    3300000: Counter
+    3300002: Floor
+    3300004: Pawn_Clerk_weeble:Pawn_Shop_Clerk_weeble
+    3300006: Roof
+    3300008: Walls
+    4300000: Roof
+    4300002: Walls
+    4300004: Floor
+    4300006: Counter
+    4300008: Pawn_Clerk_weeble:Pawn_Shop_Clerk_weeble
+    7400000: Store Anim
+    9500000: //RootNode
+    11100000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Store Anim
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Pawn_Clerk_weeble:back
+        weight: 1
+      - path: Pawn_Clerk_weeble:Pawn_Shop_Clerk_weeble
+        weight: 1
+      - path: Pawn_Shop
+        weight: 1
+      - path: Pawn_Shop/Counter
+        weight: 1
+      - path: Pawn_Shop/Floor
+        weight: 1
+      - path: Pawn_Shop/Roof
+        weight: 1
+      - path: Pawn_Shop/Walls
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  additionalBone: 0
+  userData: 
