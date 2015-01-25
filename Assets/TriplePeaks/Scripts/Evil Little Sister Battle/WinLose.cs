@@ -37,7 +37,7 @@ public class WinLose : MonoBehaviour
 		{
 			if(Input.GetMouseButtonUp (0))
 			{
-				Application.LoadLevel(0);
+                LevelSystem.instance.LoadNextLevel();
 			}
 		}
 	}
