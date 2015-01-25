@@ -35,13 +35,6 @@ public class PawnShopSequence : MonoBehaviour
 
         PawnShopItemDialogue.DiagBox.DialogueInteracted += HandleItemDialogue;
 
-#if UNITY_EDITOR
-        InventoryItem evidence = new InventoryItem();
-        evidence.Name = "Red Herring";
-
-        ItemSystem inv = ItemSystem.instance;
-        inv.AddItem("evidence", evidence);
-#endif
 	}
 	
 	// Update is called once per frame
