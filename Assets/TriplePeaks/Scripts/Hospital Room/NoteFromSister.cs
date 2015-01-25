@@ -18,5 +18,6 @@ public class NoteFromSister : MonoBehaviour {
 	void OnMouseDown()
 	{
 		Debug.Log ("Note clicked. fuck you");
+        LevelSystem.instance.LoadNextLevel();
 	}
 }

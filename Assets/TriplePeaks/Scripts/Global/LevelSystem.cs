@@ -49,10 +49,13 @@ public class LevelSystem : MonoBehaviour
 
         StartCoroutine(TimedLoadLevel(nextLevel, 2.5f));
 
-        Application.LoadLevel("Transition");
-
-        if (nextLevel == levelSequence[0])
+        if (nextLevel != levelSequence[0])
         {
+            Application.LoadLevel("Transition");
+        }
+        else
+        {
+            Application.LoadLevel(nextLevel);
             Destroy(this.gameObject);
         }
     }
