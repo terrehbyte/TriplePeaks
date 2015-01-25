@@ -35,10 +35,6 @@ public class WalkingToBody : MonoBehaviour {
 	void Start () 
     {
         Camera1 = Camera.main;
-        Limb1.renderer.material.color = Color.green;
-        Limb2.renderer.material.color = Color.green;
-        Limb3.renderer.material.color = Color.green;
-        Limb4.renderer.material.color = Color.green;
         TakeOffClothes = 0;
 	}
 	
@@ -114,17 +110,7 @@ public class WalkingToBody : MonoBehaviour {
 
     void ExamineBody()
     {
-        if (Limb1Clicked)
-            Limb1.renderer.material.color = Color.red;
 
-        if (Limb2Clicked)
-            Limb2.renderer.material.color = Color.red;
-
-        if (Limb3Clicked)
-            Limb3.renderer.material.color = Color.red;
-
-        if (Limb4Clicked)
-            Limb4.renderer.material.color = Color.red;
     }
 
     void ReadNote()
