@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System;
 using System.Collections;
 
 public class Veggie : MonoBehaviour
@@ -24,6 +25,7 @@ public class Veggie : MonoBehaviour
 		if(col.gameObject.tag == "Sister" && col.gameObject.GetComponent<EvilSister>()._Invulnerable == false)
 		{
 			col.gameObject.GetComponent<EvilSister>()._Health --;
+			col.gameObject.GetComponent<EvilSister>().LastDialogueDisplay = DateTime.Now;
 			col.gameObject.GetComponent<EvilSister>()._Dialogue.text = "Yuck! Augghhh...";
 		}
 		Destroy (gameObject);
