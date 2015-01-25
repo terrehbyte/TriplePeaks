@@ -86,8 +86,10 @@ public class EntryLevelPlayer : MonoBehaviour
 			renderer.enabled = false;
 			if(Input.GetMouseButtonDown (0))
 			{
-				Application.LoadLevel(0);
+                LifeSystem.instance.Lives--;
+				Application.LoadLevel(Application.loadedLevel);
 			}
+            
 		}
 		
 	}

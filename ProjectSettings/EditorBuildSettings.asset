@@ -18,6 +18,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/TriplePeaks/Scenes/hospital.unity
   - enabled: 1
+    path: Assets/TriplePeaks/Scenes/EvilGirlEntryLevel.unity
+  - enabled: 1
     path: Assets/TriplePeaks/Scenes/EvilSisterBattle.unity
   - enabled: 1
     path: Assets/TriplePeaks/Scenes/Transition.unity
