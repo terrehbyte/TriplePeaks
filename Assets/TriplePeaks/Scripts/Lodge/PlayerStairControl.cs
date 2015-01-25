@@ -8,6 +8,12 @@ public class PlayerStairControl : MonoBehaviour {
 	public Collider playerColl;
 	public float jumpForce, rightForce;
 
+    [SerializeField]
+    MiniGameRotator rotator;
+
+    [SerializeField]
+    Collider EndTrigger;
+
 //	enum DIRECTION
 //	{
 //		NEUTRAL,
@@ -65,4 +71,12 @@ public class PlayerStairControl : MonoBehaviour {
 		jumpCount = 0;
 		rightCount = 0;
 	}
+
+    void OnTriggerEnter(Collider trigger)
+    {
+        if (trigger == EndTrigger)
+        {
+            rotator.NextMinigame();
+        }
+    }
 }
