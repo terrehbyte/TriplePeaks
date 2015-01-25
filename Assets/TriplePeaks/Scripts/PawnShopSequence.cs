@@ -35,7 +35,7 @@ public class PawnShopSequence : MonoBehaviour
 
 #if UNITY_EDITOR
         InventoryItem evidence = new InventoryItem();
-        evidence.Name = "Satanic Bible";
+        evidence.Name = "Red Herring";
 
         ItemSystem inv = ItemSystem.instance;
         inv.AddItem("evidence", evidence);
@@ -114,7 +114,7 @@ public class PawnShopSequence : MonoBehaviour
                 }
             case "Red Herring":
                 {
-                    Instantiate(RedHerringPrefab, ItemSpawnpoint.position, Quaternion.identity);
+                    Instantiate(RedHerringPrefab, ItemSpawnpoint.position, Quaternion.EulerAngles(new Vector3(-90f, -90.0f, 0.0f)));
                     break;
                 }
             default:
