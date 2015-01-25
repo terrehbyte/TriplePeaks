@@ -8,7 +8,7 @@ public class InventoryItem
     public string Description;
 }
 
-public class ItemSystem : MonoBehaviour {
+public class ItemSystem : MonoBehaviour, DataSystem {
 
     private static ItemSystem _instance;
 
@@ -53,6 +53,11 @@ public class ItemSystem : MonoBehaviour {
     public bool CheckItemExists(string key)
     {
         return Items.ContainsKey(key);
+    }
+
+    void DataSystem.ResetData()
+    {
+        Items.Clear();
     }
 
     Dictionary<string, InventoryItem> Items = new Dictionary<string,InventoryItem>();

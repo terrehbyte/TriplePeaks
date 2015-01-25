@@ -2,9 +2,10 @@
 using System.Collections;
 
 
-public class LifeSystem : MonoBehaviour {
+public class LifeSystem : MonoBehaviour, DataSystem {
 
-    public int Lives = 3;
+    public int LivesStartingCount = 3;
+    public int Lives;
 
     private static LifeSystem _instance;
 
@@ -27,11 +28,16 @@ public class LifeSystem : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+        Lives = LivesStartingCount;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 	
 	}
+
+    void DataSystem.ResetData()
+    {
+        Lives = LivesStartingCount;
+    }
 }

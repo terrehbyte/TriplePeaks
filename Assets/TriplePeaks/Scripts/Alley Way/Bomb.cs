@@ -21,5 +21,8 @@ public class Bomb : MonoBehaviour {
     {
         renderer.material.color = Color.green;
         Player.GetComponent<WalkingToBody>().BombClicked = true;
+
+        LevelSystem.instance.LoadNextLevel();
     }
+
 }
