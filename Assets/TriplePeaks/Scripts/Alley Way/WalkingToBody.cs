@@ -67,8 +67,8 @@ public class WalkingToBody : MonoBehaviour {
         if (Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.RightArrow))
         {
             Player.transform.position += Player.transform.forward * 0.5f;
-            Clothes.transform.position = new Vector3(33.702f, 1.6879f, -10.198f);
-            Clothes.transform.rotation = new Quaternion(356.355f, 260.7715f, 283.1791f, 0f);
+            //Clothes.transform.position = new Vector3(33.702f, 1.6879f, -10.198f);
+            //Clothes.transform.rotation = new Quaternion(356.355f, 260.7715f, 283.1791f, 0f);
         }
     }
 
@@ -103,8 +103,9 @@ public class WalkingToBody : MonoBehaviour {
             TakeOffClothes++;
             ClothesAnim.SetTrigger("Move");
         }
+        ClothesAnim.SetTrigger("Stop");
 
-        if (TakeOffClothes >= 10)
+        if (TakeOffClothes >= 25)
         {
             RemovedClothes = true;
             ChangeCamera2();
