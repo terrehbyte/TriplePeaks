@@ -1,0 +1,363 @@
+fileFormatVersion: 2
+guid: 622f0b8aaa566da4b8bd716e6f308016
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: AC
+    100002: //RootNode
+    100004: BackWall
+    100006: BrokenWall1
+    100008: BrokenWall:BrokenWall
+    100010: Door
+    100012: DriveWay
+    100014: Floor
+    100016: group2
+    100018: Ladder
+    100020: LeftWall
+    100022: pCube1
+    100024: pCube10
+    100026: pCube11
+    100028: pCube12
+    100030: pCube13
+    100032: pCube14
+    100034: pCube2
+    100036: pCube3
+    100038: pCube4
+    100040: pCube5
+    100042: pCube6
+    100044: pCube7
+    100046: pCube8
+    100048: pCube9
+    100050: pCylinder1
+    100052: pCylinder1 1
+    100054: pCylinder1 2
+    100056: pCylinder10
+    100058: pCylinder11
+    100060: pCylinder12
+    100062: pCylinder13
+    100064: pCylinder14
+    100066: pCylinder15
+    100068: pCylinder16
+    100070: pCylinder17
+    100072: pCylinder18
+    100074: pCylinder19
+    100076: pCylinder2
+    100078: pCylinder2 1
+    100080: pCylinder2 2
+    100082: pCylinder20
+    100084: pCylinder3
+    100086: pCylinder3 1
+    100088: pCylinder3 2
+    100090: pCylinder4
+    100092: pCylinder4 1
+    100094: pCylinder4 2
+    100096: pCylinder5
+    100098: pCylinder6
+    100100: pCylinder7
+    100102: pCylinder8
+    100104: pCylinder9
+    100106: Platform
+    100108: PowerMeter
+    100110: pPlane10
+    100112: pPlane11
+    100114: pPlane12
+    100116: pPlane2
+    100118: pPlane6
+    100120: pPlane8
+    100122: pPlane9
+    100124: Railing
+    100126: Railing1
+    100128: Railing2
+    100130: RightWall
+    100132: StairsDoor
+    100134: Walls
+    100136: WallsUnseen
+    400000: AC
+    400002: //RootNode
+    400004: BackWall
+    400006: BrokenWall1
+    400008: BrokenWall:BrokenWall
+    400010: Door
+    400012: DriveWay
+    400014: Floor
+    400016: group2
+    400018: Ladder
+    400020: LeftWall
+    400022: pCube1
+    400024: pCube10
+    400026: pCube11
+    400028: pCube12
+    400030: pCube13
+    400032: pCube14
+    400034: pCube2
+    400036: pCube3
+    400038: pCube4
+    400040: pCube5
+    400042: pCube6
+    400044: pCube7
+    400046: pCube8
+    400048: pCube9
+    400050: pCylinder1
+    400052: pCylinder1 1
+    400054: pCylinder1 2
+    400056: pCylinder10
+    400058: pCylinder11
+    400060: pCylinder12
+    400062: pCylinder13
+    400064: pCylinder14
+    400066: pCylinder15
+    400068: pCylinder16
+    400070: pCylinder17
+    400072: pCylinder18
+    400074: pCylinder19
+    400076: pCylinder2
+    400078: pCylinder2 1
+    400080: pCylinder2 2
+    400082: pCylinder20
+    400084: pCylinder3
+    400086: pCylinder3 1
+    400088: pCylinder3 2
+    400090: pCylinder4
+    400092: pCylinder4 1
+    400094: pCylinder4 2
+    400096: pCylinder5
+    400098: pCylinder6
+    400100: pCylinder7
+    400102: pCylinder8
+    400104: pCylinder9
+    400106: Platform
+    400108: PowerMeter
+    400110: pPlane10
+    400112: pPlane11
+    400114: pPlane12
+    400116: pPlane2
+    400118: pPlane6
+    400120: pPlane8
+    400122: pPlane9
+    400124: Railing
+    400126: Railing1
+    400128: Railing2
+    400130: RightWall
+    400132: StairsDoor
+    400134: Walls
+    400136: WallsUnseen
+    2300000: BackWall
+    2300002: BrokenWall1
+    2300004: BrokenWall:BrokenWall
+    2300006: Door
+    2300008: DriveWay
+    2300010: Floor
+    2300012: pCube1
+    2300014: pCube10
+    2300016: pCube11
+    2300018: pCube12
+    2300020: pCube13
+    2300022: pCube14
+    2300024: pCube2
+    2300026: pCube3
+    2300028: pCube4
+    2300030: pCube5
+    2300032: pCube6
+    2300034: pCube7
+    2300036: pCube8
+    2300038: pCube9
+    2300040: pCylinder1
+    2300042: pCylinder1 1
+    2300044: pCylinder1 2
+    2300046: pCylinder10
+    2300048: pCylinder11
+    2300050: pCylinder12
+    2300052: pCylinder13
+    2300054: pCylinder14
+    2300056: pCylinder15
+    2300058: pCylinder16
+    2300060: pCylinder17
+    2300062: pCylinder18
+    2300064: pCylinder19
+    2300066: pCylinder2
+    2300068: pCylinder2 1
+    2300070: pCylinder2 2
+    2300072: pCylinder20
+    2300074: pCylinder3
+    2300076: pCylinder3 1
+    2300078: pCylinder3 2
+    2300080: pCylinder4
+    2300082: pCylinder4 1
+    2300084: pCylinder4 2
+    2300086: pCylinder5
+    2300088: pCylinder6
+    2300090: pCylinder7
+    2300092: pCylinder8
+    2300094: pCylinder9
+    2300096: pPlane10
+    2300098: pPlane11
+    2300100: pPlane12
+    2300102: pPlane2
+    2300104: pPlane6
+    2300106: pPlane8
+    2300108: pPlane9
+    3300000: BackWall
+    3300002: BrokenWall1
+    3300004: BrokenWall:BrokenWall
+    3300006: Door
+    3300008: DriveWay
+    3300010: Floor
+    3300012: pCube1
+    3300014: pCube10
+    3300016: pCube11
+    3300018: pCube12
+    3300020: pCube13
+    3300022: pCube14
+    3300024: pCube2
+    3300026: pCube3
+    3300028: pCube4
+    3300030: pCube5
+    3300032: pCube6
+    3300034: pCube7
+    3300036: pCube8
+    3300038: pCube9
+    3300040: pCylinder1
+    3300042: pCylinder1 1
+    3300044: pCylinder1 2
+    3300046: pCylinder10
+    3300048: pCylinder11
+    3300050: pCylinder12
+    3300052: pCylinder13
+    3300054: pCylinder14
+    3300056: pCylinder15
+    3300058: pCylinder16
+    3300060: pCylinder17
+    3300062: pCylinder18
+    3300064: pCylinder19
+    3300066: pCylinder2
+    3300068: pCylinder2 1
+    3300070: pCylinder2 2
+    3300072: pCylinder20
+    3300074: pCylinder3
+    3300076: pCylinder3 1
+    3300078: pCylinder3 2
+    3300080: pCylinder4
+    3300082: pCylinder4 1
+    3300084: pCylinder4 2
+    3300086: pCylinder5
+    3300088: pCylinder6
+    3300090: pCylinder7
+    3300092: pCylinder8
+    3300094: pCylinder9
+    3300096: pPlane10
+    3300098: pPlane11
+    3300100: pPlane12
+    3300102: pPlane2
+    3300104: pPlane6
+    3300106: pPlane8
+    3300108: pPlane9
+    4300000: Floor
+    4300002: DriveWay
+    4300004: pCube1
+    4300006: pCube2
+    4300008: BackWall
+    4300010: pPlane12
+    4300012: pPlane11
+    4300014: pPlane2
+    4300016: pPlane6
+    4300018: pPlane10
+    4300020: pPlane8
+    4300022: pPlane9
+    4300024: pCylinder3
+    4300026: pCylinder4
+    4300028: pCylinder2
+    4300030: pCylinder1
+    4300032: pCube5
+    4300034: pCylinder9
+    4300036: pCylinder7
+    4300038: pCylinder8
+    4300040: pCube12
+    4300042: pCube13
+    4300044: pCube14
+    4300046: pCube11
+    4300048: pCube10
+    4300050: pCube9
+    4300052: pCube8
+    4300054: pCube7
+    4300056: Door
+    4300058: pCylinder6
+    4300060: pCube4
+    4300062: pCube3
+    4300064: pCylinder5
+    4300066: pCube6
+    4300068: pCylinder3
+    4300070: pCylinder4
+    4300072: pCylinder2
+    4300074: pCylinder1
+    4300076: pCylinder10
+    4300078: pCylinder11
+    4300080: pCylinder12
+    4300082: pCylinder13
+    4300084: pCylinder14
+    4300086: pCylinder15
+    4300088: pCylinder16
+    4300090: pCylinder17
+    4300092: pCylinder18
+    4300094: pCylinder19
+    4300096: pCylinder20
+    4300098: pCylinder3
+    4300100: pCylinder4
+    4300102: pCylinder2
+    4300104: pCylinder1
+    4300106: BrokenWall:BrokenWall
+    4300108: BrokenWall1
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
