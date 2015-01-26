@@ -11,12 +11,16 @@ public class InvestigateRoom : MonoBehaviour {
 
     public bool MadeSelection;
 
-    public float speed = 5.0f;
+    public bool Item1;
+    public bool Item2;
+    public bool Item3;
+
+    public float speed = 15.0f;
     
     // Use this for initialization
 	void Start () 
     {
-        speed = 5.0f;
+        speed = 15.0f;
 	}
 	
 	// Update is called once per frame
@@ -36,6 +40,12 @@ public class InvestigateRoom : MonoBehaviour {
                 //gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, Waypoint3.transform.position, step);
                 PickedPosition = Waypoint3.transform.position;
                 MadeSelection = true;
+                Item3 = true;
+
+                InventoryItem item = new InventoryItem();
+                item.Name = "Rolex";
+
+                ItemSystem.instance.AddItem("evidence", item);
             }
 
             if (Input.GetKeyUp(KeyCode.UpArrow))
@@ -43,6 +53,11 @@ public class InvestigateRoom : MonoBehaviour {
                 //gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, Waypoint1.transform.position, step);
                 PickedPosition = Waypoint1.transform.position;
                 MadeSelection = true;
+                Item1 = true;
+                InventoryItem item = new InventoryItem();
+                item.Name = "Red Herring";
+
+                ItemSystem.instance.AddItem("evidence", item);
             }
 
             if (Input.GetKeyUp(KeyCode.RightArrow))
@@ -50,6 +65,12 @@ public class InvestigateRoom : MonoBehaviour {
                 //gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, Waypoint2.transform.position, step);
                 PickedPosition = Waypoint2.transform.position;
                 MadeSelection = true;
+                Item2 = true;
+
+                InventoryItem item = new InventoryItem();
+                item.Name = "Satanic Bible";
+
+                ItemSystem.instance.AddItem("evidence", item);
             }
         }
 
@@ -59,7 +80,7 @@ public class InvestigateRoom : MonoBehaviour {
 
     void CheckDistance()
     {
-        if (Vector3.Distance(gameObject.transform.position, PickedPosition) <= 1.0f)
+        if (Vector3.Distance(gameObject.transform.position, PickedPosition) <= 3.2f)
         {
             LevelSystem.instance.LoadNextLevel();
         }
