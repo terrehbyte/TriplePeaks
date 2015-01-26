@@ -666,7 +666,8 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: c9a11f71d5a8c7a4c83754d9efa444f1, type: 2}
+  - {fileID: 2100000, guid: 54403d267cb1d0a419872019ee30db92, type: 2}
+  - {fileID: 2100000, guid: e4b739d02c54ec444b13fdc3f7fc96e2, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -681,7 +682,7 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 2008130388}
   m_GameObject: {fileID: 1152379014}
-  m_Mesh: {fileID: 4300000, guid: 2654a90f19fbbcf4fb2825b27cd31207, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 405df0b029ded5b448959e1836da0e3e, type: 3}
 --- !u!135 &1152379019
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -714,7 +715,7 @@ MonoBehaviour:
   _Health: 4
   _Invulnerable: 1
   _Dialogue: {fileID: 452803871}
-  _DefaultMaterial: {fileID: 2100000, guid: c9a11f71d5a8c7a4c83754d9efa444f1, type: 2}
+  _DefaultMaterial: {fileID: 2100000, guid: 54403d267cb1d0a419872019ee30db92, type: 2}
   _MonsterMaterial: {fileID: 2100000, guid: e4b739d02c54ec444b13fdc3f7fc96e2, type: 2}
   _Glow: {fileID: 1499183177}
 --- !u!54 &1152379021
@@ -1621,6 +1622,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 20418779}
     m_Modifications:
+    - target: {fileID: 2300000, guid: 112f4e53a1733454dab29e8ff62e7138, type: 2}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 112f4e53a1733454dab29e8ff62e7138, type: 2}
       propertyPath: m_LocalPosition.x
       value: 10.0345774
@@ -1639,7 +1644,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 112f4e53a1733454dab29e8ff62e7138, type: 2}
       propertyPath: m_LocalRotation.y
-      value: .863550544
+      value: .863550603
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 112f4e53a1733454dab29e8ff62e7138, type: 2}
       propertyPath: m_LocalRotation.z
@@ -1647,7 +1652,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 112f4e53a1733454dab29e8ff62e7138, type: 2}
       propertyPath: m_LocalRotation.w
-      value: -.504262209
+      value: -.504262269
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 112f4e53a1733454dab29e8ff62e7138, type: 2}
       propertyPath: m_RootOrder
@@ -1684,7 +1689,7 @@ Prefab:
     - target: {fileID: 11400000, guid: 112f4e53a1733454dab29e8ff62e7138, type: 2}
       propertyPath: _DefaultMaterial
       value: 
-      objectReference: {fileID: 2100000, guid: c9a11f71d5a8c7a4c83754d9efa444f1, type: 2}
+      objectReference: {fileID: 2100000, guid: 54403d267cb1d0a419872019ee30db92, type: 2}
     - target: {fileID: 11400000, guid: 112f4e53a1733454dab29e8ff62e7138, type: 2}
       propertyPath: _MonsterMaterial
       value: 
@@ -1693,6 +1698,18 @@ Prefab:
       propertyPath: _Glow
       value: 
       objectReference: {fileID: 1499183177}
+    - target: {fileID: 3300000, guid: 112f4e53a1733454dab29e8ff62e7138, type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: 405df0b029ded5b448959e1836da0e3e, type: 3}
+    - target: {fileID: 2300000, guid: 112f4e53a1733454dab29e8ff62e7138, type: 2}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: e4b739d02c54ec444b13fdc3f7fc96e2, type: 2}
+    - target: {fileID: 2300000, guid: 112f4e53a1733454dab29e8ff62e7138, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 54403d267cb1d0a419872019ee30db92, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 112f4e53a1733454dab29e8ff62e7138, type: 2}
   m_RootGameObject: {fileID: 1152379014}
