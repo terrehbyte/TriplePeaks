@@ -12,6 +12,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/TriplePeaks/Scenes/DriveToHotel.unity
   - enabled: 1
+    path: Assets/TriplePeaks/Scenes/LodgeInvestigateRoom.unity
+  - enabled: 1
     path: Assets/TriplePeaks/Scenes/Pawn Shop.unity
   - enabled: 1
     path: Assets/TriplePeaks/Scenes/redroom.unity

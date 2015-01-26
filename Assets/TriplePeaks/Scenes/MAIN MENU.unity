@@ -466,6 +466,7 @@ MonoBehaviour:
   - MAIN MENU
   - walkingtobody
   - DriveToHotel
+  - LodgeInvestigateRoom
   - Pawn Shop
   - redroom
   - hospital
@@ -637,7 +638,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 11456476, guid: 032eecbb911939e418836ca8f879f98e, type: 2}
       propertyPath: levelSequence.Array.size
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 456482, guid: 032eecbb911939e418836ca8f879f98e, type: 2}
       propertyPath: m_LocalPosition.x
@@ -673,11 +674,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11456476, guid: 032eecbb911939e418836ca8f879f98e, type: 2}
       propertyPath: levelSequence.Array.data[7]
-      value: EvilSisterBattle
+      value: EvilGirlEntryLevel
       objectReference: {fileID: 0}
     - target: {fileID: 11456476, guid: 032eecbb911939e418836ca8f879f98e, type: 2}
       propertyPath: levelSequence.Array.data[6]
-      value: EvilGirlEntryLevel
+      value: hospital
       objectReference: {fileID: 0}
     - target: {fileID: 11456476, guid: 032eecbb911939e418836ca8f879f98e, type: 2}
       propertyPath: levelSequence.Array.data[8]
@@ -710,6 +711,18 @@ Prefab:
     - target: {fileID: 11456476, guid: 032eecbb911939e418836ca8f879f98e, type: 2}
       propertyPath: levelSequence.Array.data[15]
       value: EvilSisterBattle
+      objectReference: {fileID: 0}
+    - target: {fileID: 11456476, guid: 032eecbb911939e418836ca8f879f98e, type: 2}
+      propertyPath: levelSequence.Array.data[5]
+      value: redroom
+      objectReference: {fileID: 0}
+    - target: {fileID: 11456476, guid: 032eecbb911939e418836ca8f879f98e, type: 2}
+      propertyPath: levelSequence.Array.data[4]
+      value: Pawn Shop
+      objectReference: {fileID: 0}
+    - target: {fileID: 11456476, guid: 032eecbb911939e418836ca8f879f98e, type: 2}
+      propertyPath: levelSequence.Array.data[3]
+      value: LodgeInvestigateRoom
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 032eecbb911939e418836ca8f879f98e, type: 2}
