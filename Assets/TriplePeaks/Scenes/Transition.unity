@@ -123,7 +123,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 1, g: .588235259, b: .588235259, a: .0196078438}
+  m_BackGroundColor: {r: .308823526, g: 0, b: 0, a: .0196078438}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -195,7 +195,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6de83feb578d53c43a373b810e6cede7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5ef218ed3a8e770459c3254878057a24, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &2140210950
 Transform:
