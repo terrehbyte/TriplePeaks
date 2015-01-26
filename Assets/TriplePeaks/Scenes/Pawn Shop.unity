@@ -456,7 +456,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 269291458}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.60699999, y: 1.56099999, z: -5.80100012}
+  m_LocalPosition: {x: -1.505, y: 2.70700002, z: -5.80100012}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2784,7 +2784,7 @@ GameObject:
   - 4: {fileID: 1701460273}
   - 33: {fileID: 1701460275}
   - 23: {fileID: 1701460274}
-  - 64: {fileID: 1701460276}
+  - 65: {fileID: 1701460276}
   m_Layer: 0
   m_Name: Counter
   m_TagString: Untagged
@@ -2833,8 +2833,8 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1360532751}
   m_GameObject: {fileID: 1701460272}
   m_Mesh: {fileID: 4300006, guid: bc30296423990f54db54115f8cd798f9, type: 3}
---- !u!64 &1701460276
-MeshCollider:
+--- !u!65 &1701460276
+BoxCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -2843,9 +2843,8 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 4300006, guid: bc30296423990f54db54115f8cd798f9, type: 3}
+  m_Size: {x: .876596451, y: 1.06553388, z: 4.04697514}
+  m_Center: {x: 1.74666142, y: .50886178, z: -1.74529243}
 --- !u!1 &1712211020
 GameObject:
   m_ObjectHideFlags: 0

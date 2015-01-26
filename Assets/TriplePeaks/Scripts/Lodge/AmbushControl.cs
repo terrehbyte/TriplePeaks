@@ -138,8 +138,16 @@ public class AmbushControl : MonoBehaviour {
 			gunTrans.parent = null;
 			gunRB.AddForceAtPosition(new Vector3(-0.3f,1f,0) * 18f, gunForcePos, ForceMode.Impulse);
 			pDisarmReached = true;
+
+            StartCoroutine(gogogo());
 		}
 	}
+
+    IEnumerator gogogo()
+    {
+        yield return new WaitForSeconds(2.0f);
+        LevelSystem.instance.LoadNextLevel();
+    }
 
 	void vRunAway()
 	{
