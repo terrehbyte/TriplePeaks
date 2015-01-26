@@ -51,7 +51,7 @@ public class AmbushControl : MonoBehaviour {
 		gunTrans = GameObject.Find ("gun").transform;
 
 		disarmOffset = new Vector3 (0, 0, -6f);
-		Vector3 forcePosOffset = new Vector3(0,0,0.9f);
+		Vector3 forcePosOffset = new Vector3(0,0,2f);
 		
 		gunForcePos = gunTrans.localPosition + forcePosOffset;
 	}
@@ -136,7 +136,7 @@ public class AmbushControl : MonoBehaviour {
 		{
 			gunRB.isKinematic = false;
 			gunTrans.parent = null;
-			gunRB.AddForceAtPosition(Vector3.up * 20f, gunForcePos, ForceMode.Impulse);
+			gunRB.AddForceAtPosition(new Vector3(-0.3f,1f,0) * 18f, gunForcePos, ForceMode.Impulse);
 			pDisarmReached = true;
 		}
 	}
