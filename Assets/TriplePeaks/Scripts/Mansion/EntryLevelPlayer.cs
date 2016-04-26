@@ -83,7 +83,7 @@ public class EntryLevelPlayer : MonoBehaviour
 		if(_dead)
 		{
 			_message.text = "Shouldn't of touched that door man. Retry?";
-			renderer.enabled = false;
+			GetComponent<Renderer>().enabled = false;
 			if(Input.GetMouseButtonDown (0))
 			{
                 LifeSystem.instance.Lives--;
@@ -97,12 +97,12 @@ public class EntryLevelPlayer : MonoBehaviour
 	void OnTriggerStay(Collider c)
 	{
 		_colliding = true;
-		if(c.collider.tag == "Door")
+		if(c.GetComponent<Collider>().tag == "Door")
 		{
 			_message.text = "Open the door?";
 			_canOpenDoor = true;
 		}
-		if(c.collider.tag == "Switch")
+		if(c.GetComponent<Collider>().tag == "Switch")
 		{
 			_message.text = "Open the door! From the side!!";
 			_canOpenDoor = false;

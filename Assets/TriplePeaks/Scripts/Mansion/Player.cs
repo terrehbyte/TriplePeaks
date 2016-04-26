@@ -83,7 +83,7 @@ public class Player : MonoBehaviour
 			//Invulnerability
 			if(Invulnerable == true)
 			{
-				gameObject.renderer.enabled = !gameObject.renderer.enabled; //flicker
+				gameObject.GetComponent<Renderer>().enabled = !gameObject.GetComponent<Renderer>().enabled; //flicker
 			}
 			if(DateTime.Now >= WhenToLoseInvuln)
 			{

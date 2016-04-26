@@ -23,7 +23,7 @@ public class MovingSky : MonoBehaviour {
 
 		
 		float offset = Time.time * scrollSpeed;
-        renderer.material.SetTextureOffset("_MainTex", new Vector2(offset, 0));
+        GetComponent<Renderer>().material.SetTextureOffset("_MainTex", new Vector2(offset, 0));
 
 
 	}

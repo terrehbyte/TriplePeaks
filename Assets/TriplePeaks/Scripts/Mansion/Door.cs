@@ -24,7 +24,7 @@ public class Door : MonoBehaviour {
             Collider[] hit = Physics.OverlapSphere(hits.point, 5.0f);
             for (var i = 0; i < hit.Length; i++)
             {
-                hit[i].gameObject.rigidbody.AddExplosionForce(10.0f, hits.point, 10.0f, 1.0f, ForceMode.Impulse);
+                hit[i].gameObject.GetComponent<Rigidbody>().AddExplosionForce(10.0f, hits.point, 10.0f, 1.0f, ForceMode.Impulse);
             }
         }
     }

@@ -46,7 +46,7 @@ public class AmbushControl : MonoBehaviour {
 		villWP1 = GameObject.Find ("villWP1").transform.position;
 		villWP2 = GameObject.Find ("villWP2").transform.position;
 		
-		gunRB = GameObject.Find ("gun").rigidbody;
+		gunRB = GameObject.Find ("gun").GetComponent<Rigidbody>();
 		gunRB.isKinematic = true;
 		gunTrans = GameObject.Find ("gun").transform;
 

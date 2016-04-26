@@ -52,7 +52,7 @@ public class EvilSister : MonoBehaviour
 				//Evil sister will charge every x seconds, where x is the integer value set in the inspector.
 				if(DateTime.Now >= _lastChaseTime + new TimeSpan(0,0,_ChaseInterval))
 				{
-					renderer.material = _MonsterMaterial;
+					GetComponent<Renderer>().material = _MonsterMaterial;
 					_lastChaseTime = DateTime.Now;
 					_positionToCharge = _Brother.transform.position;
 					transform.LookAt (_positionToCharge);
@@ -65,7 +65,7 @@ public class EvilSister : MonoBehaviour
 				{
 					_Invulnerable = true;
 					_Glow.color = Color.white;
-					renderer.material = _DefaultMaterial;
+					GetComponent<Renderer>().material = _DefaultMaterial;
 				}
 				else
 				{

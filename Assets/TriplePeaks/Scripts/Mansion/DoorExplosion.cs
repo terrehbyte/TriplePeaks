@@ -30,8 +30,8 @@ public class DoorExplosion : MonoBehaviour {
 
     void OnMouseDown()
     {
-        rigidbody.isKinematic = false;
-        rigidbody.AddExplosionForce(666f, playerTrans.position, 10f);
+        GetComponent<Rigidbody>().isKinematic = false;
+        GetComponent<Rigidbody>().AddExplosionForce(666f, playerTrans.position, 10f);
 
         tick = true;
     }
